@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
-<title>ConclaveCalc</title>
+<title>Untitled</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -11750,24 +11750,13 @@ div#notebook {
   <div tabindex="-1" id="notebook" class="border-box-sizing">
     <div class="container" id="notebook-container">
 
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Required-Scripts">Required Scripts<a class="anchor-link" href="#Required-Scripts">&#182;</a></h1>
-</div>
-</div>
-</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[820]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
-
 <span class="kn">from</span> <span class="nn">pandas</span> <span class="kn">import</span> <span class="n">ExcelWriter</span>
 <span class="kn">from</span> <span class="nn">pandas</span> <span class="kn">import</span> <span class="n">ExcelFile</span>
 </pre></div>
@@ -11779,37 +11768,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Add Switch for team or semiprofessional event</span>
-<span class="n">teamswitch</span> <span class="o">=</span> <span class="bp">None</span>
-<span class="k">while</span> <span class="n">teamswitch</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;yes&#39;</span><span class="p">,</span> <span class="s1">&#39;no&#39;</span><span class="p">]:</span>
-    <span class="n">teamswitch</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">(</span><span class="s2">&quot;Do you need to separate competitors by team? &quot;</span><span class="p">)</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Do you need to separate competitors by team? no
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="prompt input_prompt">In&nbsp;[821]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">dirs</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">)</span> 
@@ -11818,12 +11777,10 @@ div#notebook {
 <span class="k">for</span> <span class="nb">file</span> <span class="ow">in</span> <span class="n">dirs</span><span class="p">:</span>
     <span class="k">print</span> <span class="nb">file</span>
 
-<span class="n">response</span> <span class="o">=</span> <span class="bp">None</span>
-<span class="k">while</span> <span class="n">response</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">dirs</span><span class="p">:</span>
-    <span class="n">response</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">(</span><span class="s2">&quot;Please enter filename: &quot;</span><span class="p">)</span>
-
-<span class="c1"># response = &#39;Bearclave.xlsx&#39;</span>
-<span class="n">rawinput</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">response</span><span class="p">,</span> <span class="n">sheetname</span><span class="o">=</span><span class="bp">None</span><span class="p">)</span>
+<span class="c1"># response = None</span>
+<span class="c1"># while response not in dirs:</span>
+<span class="c1">#     response = raw_input(&quot;Please enter filename: &quot;)</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">response</span><span class="p">,</span> <span class="n">sheetname</span><span class="o">=</span><span class="bp">None</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -11836,26 +11793,19 @@ div#notebook {
 
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>.git
-.gitattributes
-.gitignore
-.ipynb_checkpoints
+<pre>.ipynb_checkpoints
+Bearclave Schedule_Scoresheet 2017.xlsx
 Bearclave.xlsx
 BearClaveScheduleONLY.xlsx
-ConclaveCalc-Copy1.html
-ConclaveCalc-Copy1.py
-ConclaveCalc.html
-ConclaveCalc.ipynb
-ConclaveCalc.py
-ConclaveScheduler.html
-ConclaveScheduler.ipynb
-ConclaveScheduler.py
+CAL Registration Bearclave 2017.xlsx
+CPL Registration Bearclave 2017.xlsx
 HSU Registration Bearclave 2017.xlsx
-Registration.xlsx
 Untitled.html
+Untitled.ipynb
 Untitled.py
 Untitled.txt
-Please enter filename: Registration.xlsx
+~$Bearclave Schedule_Scoresheet 2017.xlsx
+~$Bearclave.xlsx
 </pre>
 </div>
 </div>
@@ -11864,18 +11814,9 @@ Please enter filename: Registration.xlsx
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Calculate-Results">Calculate Results<a class="anchor-link" href="#Calculate-Results">&#182;</a></h1>
-</div>
-</div>
-</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[822]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Assigns rank based on ascending or descending scores</span>
@@ -11898,11 +11839,12 @@ Please enter filename: Registration.xlsx
 <span class="c1"># Assigns points to rankings</span>
 <span class="n">rankswap</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">:</span><span class="mi">10</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span><span class="mi">7</span><span class="p">,</span> <span class="mi">3</span><span class="p">:</span><span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">:</span><span class="mi">1</span><span class="p">}</span>
 
-<span class="c1"># Assigns points based on whether events are run separately for men and women</span>
+<span class="c1"># Assigns points based on whether </span>
 <span class="n">gender_split</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Dendro&#39;</span><span class="p">,</span> <span class="s1">&#39;Traverse&#39;</span><span class="p">,</span> <span class="s1">&#39;Cruise&#39;</span><span class="p">]</span>
 
-<span class="c1"># Assigns whether or not events have a partner</span>
 <span class="n">partner_split</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Double&#39;</span><span class="p">,</span> <span class="s1">&#39;JackJill&#39;</span><span class="p">,</span> <span class="s1">&#39;Caber&#39;</span><span class="p">]</span>
+
+<span class="n">scores</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span>
 </pre></div>
 
 </div>
@@ -11912,31 +11854,30 @@ Please enter filename: Registration.xlsx
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[823]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">scores</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span>
-
-<span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">iteritems</span><span class="p">()</span> <span class="p">:</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">iteritems</span><span class="p">()</span> <span class="p">:</span>
     
     <span class="k">if</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">gender_split</span><span class="p">:</span>
-        <span class="n">temp</span> <span class="o">=</span> <span class="n">rawinput</span><span class="p">[</span><span class="n">key</span><span class="p">]</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Contestant&#39;</span><span class="p">])</span>
-        <span class="n">tempN</span> <span class="o">=</span> <span class="n">temp</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;Score&#39;</span><span class="p">,</span><span class="n">ascending</span> <span class="o">=</span> <span class="n">pt_order</span><span class="p">[</span><span class="n">key</span><span class="p">])</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+        <span class="n">temp</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">key</span><span class="p">]</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Contestant&#39;</span><span class="p">])</span>
+        <span class="n">tempN</span> <span class="o">=</span> <span class="n">temp</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="s1">&#39;Score&#39;</span><span class="p">,</span><span class="n">ascending</span> <span class="o">=</span> <span class="n">pt_order</span><span class="p">[</span><span class="n">key</span><span class="p">])</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
         <span class="c1"># Assign rank to competitor names</span>
         <span class="n">tempN</span><span class="p">[</span><span class="s1">&#39;Rank&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">tempN</span><span class="o">.</span><span class="n">index</span> <span class="o">+</span> <span class="mi">1</span>
         <span class="c1"># Assign point values to rank</span>
         <span class="n">tempN</span><span class="p">[</span><span class="s1">&#39;Points&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">tempN</span><span class="o">.</span><span class="n">Rank</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">rankswap</span><span class="p">)</span>
         <span class="n">tempN</span> <span class="o">=</span> <span class="n">tempN</span><span class="p">[</span><span class="n">tempN</span><span class="p">[</span><span class="s1">&#39;Points&#39;</span><span class="p">]</span> <span class="o">&gt;</span><span class="mi">0</span><span class="p">]</span>
         <span class="n">tempN</span><span class="p">[</span><span class="s1">&#39;Event&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">key</span>
+        
         <span class="n">scores</span> <span class="o">=</span> <span class="n">tempN</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">scores</span><span class="p">)</span>
-<span class="c1">#         print key</span>
+        <span class="k">print</span> <span class="n">key</span>
     
     <span class="k">else</span><span class="p">:</span>
         <span class="c1"># Clean Input Data</span>
-        <span class="n">temp</span> <span class="o">=</span> <span class="n">rawinput</span><span class="p">[</span><span class="n">key</span><span class="p">]</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Contestant&#39;</span><span class="p">])</span>
+        <span class="n">temp</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">key</span><span class="p">]</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Contestant&#39;</span><span class="p">])</span>
     
         <span class="c1"># Sort based on correlated rank</span>
-        <span class="n">tempM</span> <span class="o">=</span> <span class="n">temp</span><span class="p">[</span><span class="n">temp</span><span class="p">[</span><span class="s1">&#39;Gender&#39;</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;M&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;Score&#39;</span><span class="p">,</span><span class="n">ascending</span> <span class="o">=</span> <span class="n">pt_order</span><span class="p">[</span><span class="n">key</span><span class="p">])</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+        <span class="n">tempM</span> <span class="o">=</span> <span class="n">temp</span><span class="p">[</span><span class="n">temp</span><span class="p">[</span><span class="s1">&#39;Gender&#39;</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;M&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="s1">&#39;Score&#39;</span><span class="p">,</span><span class="n">ascending</span> <span class="o">=</span> <span class="n">pt_order</span><span class="p">[</span><span class="n">key</span><span class="p">])</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
         <span class="c1"># Assign rank to competitor names</span>
         <span class="n">tempM</span><span class="p">[</span><span class="s1">&#39;Rank&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">tempM</span><span class="o">.</span><span class="n">index</span> <span class="o">+</span> <span class="mi">1</span>
         <span class="c1"># Assign point values to rank</span>
@@ -11944,10 +11885,10 @@ Please enter filename: Registration.xlsx
         <span class="n">tempM</span> <span class="o">=</span> <span class="n">tempM</span><span class="p">[</span><span class="n">tempM</span><span class="p">[</span><span class="s1">&#39;Points&#39;</span><span class="p">]</span> <span class="o">&gt;</span><span class="mi">0</span><span class="p">]</span>
         <span class="n">tempM</span><span class="p">[</span><span class="s1">&#39;Event&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">key</span>
         <span class="n">scores</span> <span class="o">=</span> <span class="n">tempM</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">scores</span><span class="p">)</span>
-<span class="c1">#         print key + &#39;-M&#39;</span>
+        <span class="k">print</span> <span class="n">key</span> <span class="o">+</span> <span class="s1">&#39;-M&#39;</span>
         
         <span class="c1"># Sort based on correlated rank</span>
-        <span class="n">tempF</span> <span class="o">=</span> <span class="n">temp</span><span class="p">[</span><span class="n">temp</span><span class="p">[</span><span class="s1">&#39;Gender&#39;</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;F&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;Score&#39;</span><span class="p">,</span><span class="n">ascending</span> <span class="o">=</span> <span class="n">pt_order</span><span class="p">[</span><span class="n">key</span><span class="p">])</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+        <span class="n">tempF</span> <span class="o">=</span> <span class="n">temp</span><span class="p">[</span><span class="n">temp</span><span class="p">[</span><span class="s1">&#39;Gender&#39;</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;F&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="s1">&#39;Score&#39;</span><span class="p">,</span><span class="n">ascending</span> <span class="o">=</span> <span class="n">pt_order</span><span class="p">[</span><span class="n">key</span><span class="p">])</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
         <span class="c1"># Assign rank to competitor names</span>
         <span class="n">tempF</span><span class="p">[</span><span class="s1">&#39;Rank&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">tempF</span><span class="o">.</span><span class="n">index</span> <span class="o">+</span> <span class="mi">1</span>
         <span class="c1"># Assign point values to rank</span>
@@ -11955,36 +11896,7 @@ Please enter filename: Registration.xlsx
         <span class="n">tempF</span> <span class="o">=</span> <span class="n">tempF</span><span class="p">[</span><span class="n">tempF</span><span class="p">[</span><span class="s1">&#39;Points&#39;</span><span class="p">]</span> <span class="o">&gt;</span><span class="mi">0</span><span class="p">]</span>
         <span class="n">tempF</span><span class="p">[</span><span class="s1">&#39;Event&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">key</span>
         <span class="n">scores</span> <span class="o">=</span> <span class="n">tempF</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">scores</span><span class="p">)</span>
-<span class="c1">#         print key + &#39;-F&#39;</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Clean output</span>
-<span class="c1"># Weigh scores in partner events</span>
-<span class="n">scores</span><span class="p">[</span><span class="s1">&#39;multiplier&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">scores</span><span class="p">[</span><span class="s1">&#39;Contestant B&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">notnull</span><span class="p">(),</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-<span class="n">scores</span><span class="p">[</span><span class="s1">&#39;Points&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">scores</span><span class="p">[</span><span class="s1">&#39;multiplier&#39;</span><span class="p">]</span><span class="o">*</span><span class="n">scores</span><span class="p">[</span><span class="s1">&#39;Points&#39;</span><span class="p">]</span>
-<span class="n">scores</span> <span class="o">=</span> <span class="n">scores</span><span class="p">[[</span><span class="s1">&#39;Contestant&#39;</span><span class="p">,</span> <span class="s1">&#39;Gender&#39;</span><span class="p">,</span> <span class="s1">&#39;Contestant B&#39;</span><span class="p">,</span> <span class="s1">&#39;Gender B&#39;</span><span class="p">,</span> <span class="s1">&#39;Event&#39;</span><span class="p">,</span> <span class="s1">&#39;Team&#39;</span><span class="p">,</span> <span class="s1">&#39;School&#39;</span><span class="p">,</span> <span class="s1">&#39;Points&#39;</span><span class="p">,</span> <span class="s1">&#39;Rank&#39;</span><span class="p">]]</span>
-
-<span class="c1"># isolate partners</span>
-<span class="n">partners</span> <span class="o">=</span> <span class="n">scores</span><span class="p">[</span><span class="n">scores</span><span class="p">[</span><span class="s1">&#39;Contestant B&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">notnull</span><span class="p">()]</span>
-<span class="n">partners</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;Contestant&#39;</span><span class="p">,</span> <span class="s1">&#39;Gender&#39;</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
-<span class="n">partners</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;Contestant B&#39;</span><span class="p">:</span> <span class="s1">&#39;Contestant&#39;</span><span class="p">,</span> <span class="s1">&#39;Gender B&#39;</span><span class="p">:</span> <span class="s1">&#39;Gender&#39;</span><span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
-
-<span class="c1"># Clean remaining results from contestants</span>
-<span class="n">contestants</span> <span class="o">=</span> <span class="n">scores</span>
-<span class="n">contestants</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;Contestant B&#39;</span><span class="p">,</span> <span class="s1">&#39;Gender B&#39;</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
-
-<span class="c1"># Recombine competitors and partners into final scoresheet</span>
-<span class="n">scores</span> <span class="o">=</span> <span class="n">contestants</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">partners</span><span class="p">)</span>
+        <span class="k">print</span> <span class="n">key</span> <span class="o">+</span> <span class="s1">&#39;-F&#39;</span>
 </pre></div>
 
 </div>
@@ -11997,10 +11909,41 @@ Please enter filename: Registration.xlsx
 
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>c:\users\risato\anaconda2\lib\site-packages\ipykernel\__main__.py:9: SettingWithCopyWarning: 
-A value is trying to be set on a copy of a slice from a DataFrame
+<pre>c:\users\risato\anaconda2\lib\site-packages\ipykernel\__main__.py:5: FutureWarning: sort(columns=....) is deprecated, use sort_values(by=.....)
+c:\users\risato\anaconda2\lib\site-packages\ipykernel\__main__.py:21: FutureWarning: sort(columns=....) is deprecated, use sort_values(by=.....)
+c:\users\risato\anaconda2\lib\site-packages\ipykernel\__main__.py:32: FutureWarning: sort(columns=....) is deprecated, use sort_values(by=.....)
+</pre>
+</div>
+</div>
 
-See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Dendro
+Traverse
+Hard-M
+Hard-F
+Double-M
+Double-F
+PSaw-M
+PSaw-F
+Choker-M
+Choker-F
+Throw-M
+Throw-F
+Single-M
+Single-F
+Caber-M
+Caber-F
+Climb-M
+Climb-F
+JackJill-M
+JackJill-F
+Speed-M
+Speed-F
+Pulp-M
+Pulp-F
+OP-M
+OP-F
 </pre>
 </div>
 </div>
@@ -12009,22 +11952,2338 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[806]:</div>
 <div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Print-Results">Print Results<a class="anchor-link" href="#Print-Results">&#182;</a></h1>
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">scores</span><span class="p">[</span><span class="s1">&#39;Contestant B&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">scores</span><span class="p">[</span><span class="s1">&#39;Contestant&#39;</span><span class="p">])</span>
+</pre></div>
+
 </div>
 </div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[806]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0              BRIAN d
+1         Renny Winter
+2         Mike Johnson
+3        Spencer Adams
+4                 Dean
+0         Jillian Zuck
+1         Hannah Lopez
+2                 TESS
+3              Allegra
+4               Kathie
+0                  NaN
+1                  NaN
+2                  NaN
+0                  NaN
+1                  NaN
+2                  NaN
+3                  NaN
+4                  NaN
+0         Will Kraemer
+1          Kyle Rozell
+2       Clint Doucette
+3       Lewis Campbell
+0              Katelyn
+1                 Dana
+2                Kayla
+3        Alegra Garcia
+4        Erin Sheridan
+0                  NaN
+1                  NaN
+2                  NaN
+           ...        
+0                Kayla
+1              Katelyn
+2      Vanessa Shevlin
+3        Erin Sheridan
+4      Kathie Pauloski
+0                Scott
+1          Kyle Rozell
+2              Brain D
+3          Scott Romuk
+4                 Alex
+0      Vanessa Shevlin
+1               sierra
+2            Amanda Ma
+3         Anna Sackman
+4                becca
+0                 Alex
+1       Lewis Campbell
+2                 Mike
+3               Garett
+4                scott
+0                 Alex
+1            Amanda Ma
+2               B Wall
+3      Camila Quintana
+4      Charlie Watkins
+0         Jacob Levine
+1      Kathie Pauloski
+2    Kateyln Sunderman
+3        Rory MacNeill
+4      Sheridan DeMars
+dtype: object</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="prompt input_prompt">In&nbsp;[807]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Print Top 3 in each event</span>
-<span class="k">print</span> <span class="n">scores</span><span class="p">[</span><span class="n">scores</span><span class="p">[</span><span class="s1">&#39;Rank&#39;</span><span class="p">]</span><span class="o">&lt;=</span><span class="mi">3</span><span class="p">]</span><span class="o">.</span><span class="n">sort_values</span><span class="p">([</span><span class="s1">&#39;Event&#39;</span><span class="p">,</span> <span class="s1">&#39;Gender&#39;</span><span class="p">,</span> <span class="s1">&#39;Rank&#39;</span><span class="p">])</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">scores</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[807]:</div>
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Contestant</th>
+      <th>Contestant B</th>
+      <th>Event</th>
+      <th>Gender</th>
+      <th>Gender B</th>
+      <th>Gender.1</th>
+      <th>Heat</th>
+      <th>Judge 1</th>
+      <th>Judge 2</th>
+      <th>Points</th>
+      <th>...</th>
+      <th>Run 2 Average</th>
+      <th>Run 2 Judge 1</th>
+      <th>Run 2 Judge 2</th>
+      <th>School</th>
+      <th>Score</th>
+      <th>Side</th>
+      <th>Team</th>
+      <th>Throw 1</th>
+      <th>Throw 2</th>
+      <th>Throw 3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>sierra</td>
+      <td>BRIAN d</td>
+      <td>Pulp</td>
+      <td>F</td>
+      <td>M</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>3.12</td>
+      <td>3.13</td>
+      <td>10.0</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>HSU</td>
+      <td>3.125</td>
+      <td>NaN</td>
+      <td>A</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Rachel Werhman</td>
+      <td>Renny Winter</td>
+      <td>Pulp</td>
+      <td>F</td>
+      <td>M</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>3.15</td>
+      <td>3.16</td>
+      <td>7.0</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>CPL</td>
+      <td>3.155</td>
+      <td>NaN</td>
+      <td>A</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Anna Sackman</td>
+      <td>Mike Johnson</td>
+      <td>Pulp</td>
+      <td>F</td>
+      <td>M</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>3.27</td>
+      <td>3.28</td>
+      <td>5.0</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>CPL</td>
+      <td>3.275</td>
+      <td>NaN</td>
+      <td>B</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Molly</td>
+      <td>Spencer Adams</td>
+      <td>Pulp</td>
+      <td>F</td>
+      <td>M</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>4.06</td>
+      <td>4.06</td>
+      <td>3.0</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>UCB</td>
+      <td>4.060</td>
+      <td>NaN</td>
+      <td>A</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>naya</td>
+      <td>Dean</td>
+      <td>Pulp</td>
+      <td>F</td>
+      <td>M</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>5.41</td>
+      <td>5.41</td>
+      <td>1.0</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>HSU</td>
+      <td>5.410</td>
+      <td>NaN</td>
+      <td>B</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>0</th>
+      <td>Clint Doucette</td>
+      <td>Jillian Zuck</td>
+      <td>Pulp</td>
+      <td>M</td>
+      <td>F</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>3.04</td>
+      <td>3.03</td>
+      <td>10.0</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>CPL</td>
+      <td>3.035</td>
+      <td>NaN</td>
+      <td>B</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Lewis Campbell</td>
+      <td>Hannah Lopez</td>
+      <td>Pulp</td>
+      <td>M</td>
+      <td>F</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>4.34</td>
+      <td>4.34</td>
+      <td>7.0</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>UCB</td>
+      <td>4.340</td>
+      <td>NaN</td>
+      <td>A</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Chris McSmashter</td>
+      <td>TESS</td>
+      <td>Pulp</td>
+      <td>M</td>
+      <td>F</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>4.5</td>
+      <td>4.5</td>
+      <td>5.0</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>HSU</td>
+      <td>4.500</td>
+      <td>NaN</td>
+      <td>A</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Jacob</td>
+      <td>Allegra</td>
+      <td>Pulp</td>
+      <td>M</td>
+      <td>F</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>6.51</td>
+      <td>6.51</td>
+      <td>3.0</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>CPL</td>
+      <td>6.510</td>
+      <td>NaN</td>
+      <td>A</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Douglas Wickham</td>
+      <td>Kathie</td>
+      <td>Pulp</td>
+      <td>M</td>
+      <td>F</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>7.05</td>
+      <td>7.04</td>
+      <td>1.0</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>UCB</td>
+      <td>7.045</td>
+      <td>NaN</td>
+      <td>B</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>0</th>
+      <td>Dana G</td>
+      <td>NaN</td>
+      <td>Speed</td>
+      <td>F</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>153.98</td>
+      <td>153.56</td>
+      <td>10.0</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>HSU</td>
+      <td>153.770</td>
+      <td>2.0</td>
+      <td>A</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Giselle</td>
+      <td>NaN</td>
+      <td>Speed</td>
+      <td>F</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>3.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>7.0</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>UCB</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>B</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Hannah Lopez</td>
+      <td>NaN</td>
+      <td>Speed</td>
+      <td>F</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>0</td>
+      <td>5.0</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>UCB</td>
+      <td>NaN</td>
+      <td>3.0</td>
+      <td>A</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>0</th>
+      <td>Brian D.</td>
+      <td>NaN</td>
+      <td>Speed</td>
+      <td>M</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>75.72</td>
+      <td>75.72</td>
+      <td>10.0</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>HSU</td>
+      <td>75.720</td>
+      <td>4.0</td>
+      <td>B</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Kyle Rozell</td>
+      <td>NaN</td>
+      <td>Speed</td>
+      <td>M</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>79.6</td>
+      <td>79.55</td>
+      <td>7.0</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>CPL</td>
+      <td>79.575</td>
+      <td>1.0</td>
+      <td>A</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Will Kraemer</td>
+      <td>NaN</td>
+      <td>Speed</td>
+      <td>M</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>80.43</td>
+      <td>80.07</td>
+      <td>5.0</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>CPL</td>
+      <td>80.250</td>
+      <td>3.0</td>
+      <td>A</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Sean</td>
+      <td>NaN</td>
+      <td>Speed</td>
+      <td>M</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>109.97</td>
+      <td>109.87</td>
+      <td>3.0</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>HSU</td>
+      <td>109.920</td>
+      <td>2.0</td>
+      <td>A</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Scott Romuk</td>
+      <td>NaN</td>
+      <td>Speed</td>
+      <td>M</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>2.0</td>
+      <td>124.35</td>
+      <td>124.03</td>
+      <td>1.0</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>CPL</td>
+      <td>124.190</td>
+      <td>1.0</td>
+      <td>B</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>0</th>
+      <td>Rachel Werhman</td>
+      <td>Will Kraemer</td>
+      <td>JackJill</td>
+      <td>F</td>
+      <td>M</td>
+      <td>NaN</td>
+      <td>3.0</td>
+      <td>21.69</td>
+      <td>22</td>
+      <td>10.0</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>CPL</td>
+      <td>21.845</td>
+      <td>1.0</td>
+      <td>A</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Vanessa Shevlin</td>
+      <td>Kyle Rozell</td>
+      <td>JackJill</td>
+      <td>F</td>
+      <td>M</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>24.87</td>
+      <td>25.1</td>
+      <td>7.0</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>CPL</td>
+      <td>24.985</td>
+      <td>1.0</td>
+      <td>A</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Jillian Zuck</td>
+      <td>Clint Doucette</td>
+      <td>JackJill</td>
+      <td>F</td>
+      <td>M</td>
+      <td>NaN</td>
+      <td>2.0</td>
+      <td>53.53</td>
+      <td>53.47</td>
+      <td>5.0</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>CPL</td>
+      <td>53.500</td>
+      <td>1.0</td>
+      <td>B</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Kathie Pauloski</td>
+      <td>Lewis Campbell</td>
+      <td>JackJill</td>
+      <td>F</td>
+      <td>M</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>68.66</td>
+      <td>68.84</td>
+      <td>3.0</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>UCB</td>
+      <td>68.750</td>
+      <td>2.0</td>
+      <td>A</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>0</th>
+      <td>Scott</td>
+      <td>Katelyn</td>
+      <td>JackJill</td>
+      <td>M</td>
+      <td>F</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>21.78</td>
+      <td>21.81</td>
+      <td>10.0</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>HSU</td>
+      <td>21.795</td>
+      <td>2.0</td>
+      <td>A</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Sean</td>
+      <td>Dana</td>
+      <td>JackJill</td>
+      <td>M</td>
+      <td>F</td>
+      <td>NaN</td>
+      <td>5.0</td>
+      <td>23.82</td>
+      <td>23.65</td>
+      <td>7.0</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>HSU</td>
+      <td>23.735</td>
+      <td>1.0</td>
+      <td>A</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Alex</td>
+      <td>Kayla</td>
+      <td>JackJill</td>
+      <td>M</td>
+      <td>F</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>29.97</td>
+      <td>29.97</td>
+      <td>5.0</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>HSU</td>
+      <td>29.970</td>
+      <td>2.0</td>
+      <td>B</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Jacob Levine</td>
+      <td>Alegra Garcia</td>
+      <td>JackJill</td>
+      <td>M</td>
+      <td>F</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>35.62</td>
+      <td>35.5</td>
+      <td>3.0</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>UCB</td>
+      <td>35.560</td>
+      <td>3.0</td>
+      <td>A</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Scott Romuk</td>
+      <td>Erin Sheridan</td>
+      <td>JackJill</td>
+      <td>M</td>
+      <td>F</td>
+      <td>NaN</td>
+      <td>4.0</td>
+      <td>38.44</td>
+      <td>38.41</td>
+      <td>1.0</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>CPL</td>
+      <td>38.425</td>
+      <td>1.0</td>
+      <td>B</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>0</th>
+      <td>becca</td>
+      <td>NaN</td>
+      <td>Caber</td>
+      <td>F</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>10.0</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>HSU</td>
+      <td>4.700</td>
+      <td>NaN</td>
+      <td>B</td>
+      <td>1.4</td>
+      <td>4.7</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Jillian zuck</td>
+      <td>NaN</td>
+      <td>Caber</td>
+      <td>F</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>7.0</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>CPL</td>
+      <td>11.100</td>
+      <td>NaN</td>
+      <td>B</td>
+      <td>8.9</td>
+      <td>11.1</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Rachel Werhman</td>
+      <td>NaN</td>
+      <td>Caber</td>
+      <td>F</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>5.0</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>CPL</td>
+      <td>13.100</td>
+      <td>NaN</td>
+      <td>A</td>
+      <td>7.7</td>
+      <td>13.1</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>0</th>
+      <td>Kayla</td>
+      <td>Cece</td>
+      <td>Double</td>
+      <td>F</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>4.0</td>
+      <td>37.32</td>
+      <td>37.38</td>
+      <td>10.0</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>HSU</td>
+      <td>37.350</td>
+      <td>1.0</td>
+      <td>B</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Katelyn</td>
+      <td>Sierra</td>
+      <td>Double</td>
+      <td>F</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>3.0</td>
+      <td>38.44</td>
+      <td>38.19</td>
+      <td>7.0</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>HSU</td>
+      <td>38.315</td>
+      <td>1.0</td>
+      <td>A</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Vanessa Shevlin</td>
+      <td>Rachel Wehman</td>
+      <td>Double</td>
+      <td>F</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>42.5</td>
+      <td>39.84</td>
+      <td>5.0</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>CPL</td>
+      <td>41.170</td>
+      <td>1.0</td>
+      <td>A</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Erin Sheridan</td>
+      <td>Anna Sackman</td>
+      <td>Double</td>
+      <td>F</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>2.0</td>
+      <td>51.25</td>
+      <td>51.91</td>
+      <td>3.0</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>CPL</td>
+      <td>51.580</td>
+      <td>1.0</td>
+      <td>B</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Kathie Pauloski</td>
+      <td>Molly West</td>
+      <td>Double</td>
+      <td>F</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>83.09</td>
+      <td>82.94</td>
+      <td>1.0</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>UCB</td>
+      <td>83.015</td>
+      <td>2.0</td>
+      <td>A</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>0</th>
+      <td>Scott</td>
+      <td>Chris</td>
+      <td>Double</td>
+      <td>M</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>18.9</td>
+      <td>18.63</td>
+      <td>10.0</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>HSU</td>
+      <td>18.765</td>
+      <td>2.0</td>
+      <td>A</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Kyle Rozell</td>
+      <td>Will Kaemer</td>
+      <td>Double</td>
+      <td>M</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>21.18</td>
+      <td>20.25</td>
+      <td>7.0</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>CPL</td>
+      <td>20.715</td>
+      <td>1.0</td>
+      <td>A</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Brain D</td>
+      <td>Sean</td>
+      <td>Double</td>
+      <td>M</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>21.15</td>
+      <td>21.22</td>
+      <td>5.0</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>HSU</td>
+      <td>21.185</td>
+      <td>2.0</td>
+      <td>A</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Scott Romuk</td>
+      <td>Mike Johnson</td>
+      <td>Double</td>
+      <td>M</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>2.0</td>
+      <td>25.25</td>
+      <td>25.12</td>
+      <td>3.0</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>CPL</td>
+      <td>25.185</td>
+      <td>1.0</td>
+      <td>B</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Alex</td>
+      <td>Brian Wall</td>
+      <td>Double</td>
+      <td>M</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>28.79</td>
+      <td>28.68</td>
+      <td>1.0</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>HSU</td>
+      <td>28.735</td>
+      <td>2.0</td>
+      <td>B</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>0</th>
+      <td>Vanessa Shevlin</td>
+      <td>NaN</td>
+      <td>Hard</td>
+      <td>F</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>-</td>
+      <td>-</td>
+      <td>10.0</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>CPL</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>A</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>sierra</td>
+      <td>NaN</td>
+      <td>Hard</td>
+      <td>F</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>-</td>
+      <td>-</td>
+      <td>7.0</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>HSU</td>
+      <td>NaN</td>
+      <td>2.0</td>
+      <td>A</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Amanda Ma</td>
+      <td>NaN</td>
+      <td>Hard</td>
+      <td>F</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>-</td>
+      <td>-</td>
+      <td>5.0</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>UCB</td>
+      <td>NaN</td>
+      <td>3.0</td>
+      <td>A</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Anna Sackman</td>
+      <td>NaN</td>
+      <td>Hard</td>
+      <td>F</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>2.0</td>
+      <td>-</td>
+      <td>-</td>
+      <td>3.0</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>CPL</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>B</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>becca</td>
+      <td>NaN</td>
+      <td>Hard</td>
+      <td>F</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>-</td>
+      <td>-</td>
+      <td>1.0</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>HSU</td>
+      <td>NaN</td>
+      <td>2.0</td>
+      <td>B</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>0</th>
+      <td>Alex</td>
+      <td>NaN</td>
+      <td>Hard</td>
+      <td>M</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>66</td>
+      <td>69</td>
+      <td>10.0</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>HSU</td>
+      <td>67.500</td>
+      <td>4.0</td>
+      <td>B</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Lewis Campbell</td>
+      <td>NaN</td>
+      <td>Hard</td>
+      <td>M</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>64</td>
+      <td>64</td>
+      <td>7.0</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>UCB</td>
+      <td>64.000</td>
+      <td>3.0</td>
+      <td>A</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Mike</td>
+      <td>NaN</td>
+      <td>Hard</td>
+      <td>M</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>60</td>
+      <td>60</td>
+      <td>5.0</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>CPL</td>
+      <td>60.000</td>
+      <td>1.0</td>
+      <td>B</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Garett</td>
+      <td>NaN</td>
+      <td>Hard</td>
+      <td>M</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>60</td>
+      <td>60</td>
+      <td>3.0</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>HSU</td>
+      <td>60.000</td>
+      <td>4.0</td>
+      <td>B</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>scott</td>
+      <td>NaN</td>
+      <td>Hard</td>
+      <td>M</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>52</td>
+      <td>52</td>
+      <td>1.0</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>HSU</td>
+      <td>52.000</td>
+      <td>2.0</td>
+      <td>A</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>0</th>
+      <td>Alex</td>
+      <td>NaN</td>
+      <td>Traverse</td>
+      <td>M</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>10.0</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>HSU</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>B</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Amanda Ma</td>
+      <td>NaN</td>
+      <td>Traverse</td>
+      <td>F</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>7.0</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>UCB</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>A</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>B Wall</td>
+      <td>NaN</td>
+      <td>Traverse</td>
+      <td>F</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>5.0</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>HSU</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>B</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Camila Quintana</td>
+      <td>NaN</td>
+      <td>Traverse</td>
+      <td>M</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>3.0</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>UCB</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>B</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Charlie Watkins</td>
+      <td>NaN</td>
+      <td>Traverse</td>
+      <td>M</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>CPL</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>B</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>0</th>
+      <td>Jacob Levine</td>
+      <td>NaN</td>
+      <td>Dendro</td>
+      <td>M</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>10.0</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>UCB</td>
+      <td>39.000</td>
+      <td>NaN</td>
+      <td>A</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Kathie Pauloski</td>
+      <td>NaN</td>
+      <td>Dendro</td>
+      <td>F</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>7.0</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>UCB</td>
+      <td>38.000</td>
+      <td>NaN</td>
+      <td>A</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Kateyln Sunderman</td>
+      <td>NaN</td>
+      <td>Dendro</td>
+      <td>F</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>5.0</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>CPL</td>
+      <td>36.000</td>
+      <td>NaN</td>
+      <td>A</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Rory MacNeill</td>
+      <td>NaN</td>
+      <td>Dendro</td>
+      <td>M</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>3.0</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>CPL</td>
+      <td>32.000</td>
+      <td>NaN</td>
+      <td>A</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Sheridan DeMars</td>
+      <td>NaN</td>
+      <td>Dendro</td>
+      <td>M</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>CPL</td>
+      <td>31.000</td>
+      <td>NaN</td>
+      <td>B</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+<p>107 rows × 28 columns</p>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[801]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">scores</span><span class="p">[</span><span class="n">scores</span><span class="p">[</span><span class="s1">&#39;Rank&#39;</span><span class="p">]</span><span class="o">==</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">scores</span><span class="p">[</span><span class="n">scores</span><span class="p">[</span><span class="s1">&#39;Rank&#39;</span><span class="p">]</span><span class="o">==</span><span class="mi">2</span><span class="p">]</span>
+<span class="n">scores</span><span class="p">[</span><span class="n">scores</span><span class="p">[</span><span class="s1">&#39;Rank&#39;</span><span class="p">]</span><span class="o">==</span><span class="mi">3</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[801]:</div>
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Contestant</th>
+      <th>Contestant B</th>
+      <th>Event</th>
+      <th>Gender</th>
+      <th>Gender B</th>
+      <th>Gender.1</th>
+      <th>Heat</th>
+      <th>Judge 1</th>
+      <th>Judge 2</th>
+      <th>Points</th>
+      <th>...</th>
+      <th>Run 2 Average</th>
+      <th>Run 2 Judge 1</th>
+      <th>Run 2 Judge 2</th>
+      <th>School</th>
+      <th>Score</th>
+      <th>Side</th>
+      <th>Team</th>
+      <th>Throw 1</th>
+      <th>Throw 2</th>
+      <th>Throw 3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2</th>
+      <td>Anna Sackman</td>
+      <td>Mike Johnson</td>
+      <td>Pulp</td>
+      <td>F</td>
+      <td>M</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>3.27</td>
+      <td>3.28</td>
+      <td>5.0</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>CPL</td>
+      <td>3.275</td>
+      <td>NaN</td>
+      <td>B</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Chris McSmashter</td>
+      <td>TESS</td>
+      <td>Pulp</td>
+      <td>M</td>
+      <td>F</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>4.5</td>
+      <td>4.5</td>
+      <td>5.0</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>HSU</td>
+      <td>4.500</td>
+      <td>NaN</td>
+      <td>A</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Hannah Lopez</td>
+      <td>NaN</td>
+      <td>Speed</td>
+      <td>F</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>0</td>
+      <td>5.0</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>UCB</td>
+      <td>NaN</td>
+      <td>3.0</td>
+      <td>A</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Will Kraemer</td>
+      <td>NaN</td>
+      <td>Speed</td>
+      <td>M</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>80.43</td>
+      <td>80.07</td>
+      <td>5.0</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>CPL</td>
+      <td>80.250</td>
+      <td>3.0</td>
+      <td>A</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Jillian Zuck</td>
+      <td>Clint Doucette</td>
+      <td>JackJill</td>
+      <td>F</td>
+      <td>M</td>
+      <td>NaN</td>
+      <td>2.0</td>
+      <td>53.53</td>
+      <td>53.47</td>
+      <td>5.0</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>CPL</td>
+      <td>53.500</td>
+      <td>1.0</td>
+      <td>B</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Alex</td>
+      <td>Kayla</td>
+      <td>JackJill</td>
+      <td>M</td>
+      <td>F</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>29.97</td>
+      <td>29.97</td>
+      <td>5.0</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>HSU</td>
+      <td>29.970</td>
+      <td>2.0</td>
+      <td>B</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Rachel Werhman</td>
+      <td>NaN</td>
+      <td>Caber</td>
+      <td>F</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>5.0</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>CPL</td>
+      <td>13.100</td>
+      <td>NaN</td>
+      <td>A</td>
+      <td>7.7</td>
+      <td>13.1</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>b wall</td>
+      <td>NaN</td>
+      <td>Caber</td>
+      <td>M</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>5.0</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>HSU</td>
+      <td>21.500</td>
+      <td>NaN</td>
+      <td>B</td>
+      <td>17.5</td>
+      <td>21.5</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Becca</td>
+      <td>NaN</td>
+      <td>Single</td>
+      <td>F</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>75.47</td>
+      <td>74.97</td>
+      <td>5.0</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>HSU</td>
+      <td>75.220</td>
+      <td>2.0</td>
+      <td>B</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Sean</td>
+      <td>NaN</td>
+      <td>Single</td>
+      <td>M</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>39.25</td>
+      <td>39.25</td>
+      <td>5.0</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>HSU</td>
+      <td>39.250</td>
+      <td>4.0</td>
+      <td>A</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Hannah Lopez</td>
+      <td>NaN</td>
+      <td>Throw</td>
+      <td>F</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>5.0</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>UCB</td>
+      <td>5.000</td>
+      <td>NaN</td>
+      <td>A</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>4.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Lewis Campbell</td>
+      <td>NaN</td>
+      <td>Throw</td>
+      <td>M</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>5.0</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>UCB</td>
+      <td>12.000</td>
+      <td>NaN</td>
+      <td>A</td>
+      <td>5.0</td>
+      <td>3.0</td>
+      <td>4.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Giselle Vandrick</td>
+      <td>NaN</td>
+      <td>Choker</td>
+      <td>F</td>
+      <td>NaN</td>
+      <td>F</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>5.0</td>
+      <td>...</td>
+      <td>29.625</td>
+      <td>29.53</td>
+      <td>29.72</td>
+      <td>UCB</td>
+      <td>29.625</td>
+      <td>NaN</td>
+      <td>B</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Sean</td>
+      <td>NaN</td>
+      <td>Choker</td>
+      <td>M</td>
+      <td>NaN</td>
+      <td>M</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>5.0</td>
+      <td>...</td>
+      <td>22.200</td>
+      <td>22.18</td>
+      <td>22.22</td>
+      <td>HSU</td>
+      <td>22.200</td>
+      <td>NaN</td>
+      <td>A</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Tess</td>
+      <td>NaN</td>
+      <td>PSaw</td>
+      <td>F</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>5.0</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>-</td>
+      <td>-</td>
+      <td>HSU</td>
+      <td>NaN</td>
+      <td>2.0</td>
+      <td>A</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Chris McSmashter</td>
+      <td>NaN</td>
+      <td>PSaw</td>
+      <td>M</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>5.0</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>-</td>
+      <td>-</td>
+      <td>HSU</td>
+      <td>30.160</td>
+      <td>2.0</td>
+      <td>A</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Vanessa Shevlin</td>
+      <td>Rachel Wehman</td>
+      <td>Double</td>
+      <td>F</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>42.5</td>
+      <td>39.84</td>
+      <td>5.0</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>CPL</td>
+      <td>41.170</td>
+      <td>1.0</td>
+      <td>A</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Brain D</td>
+      <td>Sean</td>
+      <td>Double</td>
+      <td>M</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>21.15</td>
+      <td>21.22</td>
+      <td>5.0</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>HSU</td>
+      <td>21.185</td>
+      <td>2.0</td>
+      <td>A</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Amanda Ma</td>
+      <td>NaN</td>
+      <td>Hard</td>
+      <td>F</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>-</td>
+      <td>-</td>
+      <td>5.0</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>UCB</td>
+      <td>NaN</td>
+      <td>3.0</td>
+      <td>A</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Mike</td>
+      <td>NaN</td>
+      <td>Hard</td>
+      <td>M</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>60</td>
+      <td>60</td>
+      <td>5.0</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>CPL</td>
+      <td>60.000</td>
+      <td>1.0</td>
+      <td>B</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>B Wall</td>
+      <td>NaN</td>
+      <td>Traverse</td>
+      <td>F</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>5.0</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>HSU</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>B</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Kateyln Sunderman</td>
+      <td>NaN</td>
+      <td>Dendro</td>
+      <td>F</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>5.0</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>CPL</td>
+      <td>36.000</td>
+      <td>NaN</td>
+      <td>A</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+<p>22 rows × 28 columns</p>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[695]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="nb">list</span><span class="p">(</span><span class="n">scores</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[695]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[u&#39;Contestant&#39;,
+ u&#39;Contestant B&#39;,
+ &#39;Event&#39;,
+ u&#39;Gender&#39;,
+ u&#39;Gender B&#39;,
+ u&#39;Gender.1&#39;,
+ u&#39;Heat&#39;,
+ u&#39;Judge 1&#39;,
+ u&#39;Judge 2&#39;,
+ &#39;Points&#39;,
+ u&#39;Pole 1 time&#39;,
+ u&#39;Pole 1 time.1&#39;,
+ u&#39;Pole 2 time&#39;,
+ u&#39;Pole 2 time.1&#39;,
+ &#39;Rank&#39;,
+ u&#39;Run 1 Average&#39;,
+ u&#39;Run 1 Judge 1&#39;,
+ u&#39;Run 1 Judge 2&#39;,
+ u&#39;Run 2 Average&#39;,
+ u&#39;Run 2 Judge 1&#39;,
+ u&#39;Run 2 Judge 2&#39;,
+ u&#39;School&#39;,
+ u&#39;Score&#39;,
+ u&#39;Side&#39;,
+ u&#39;Team&#39;,
+ u&#39;Throw 1&#39;,
+ u&#39;Throw 2&#39;,
+ u&#39;Throw 3&#39;]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[701]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">final</span> <span class="o">=</span> <span class="n">scores</span><span class="p">[[</span><span class="s1">&#39;Contestant&#39;</span><span class="p">,</span> <span class="s1">&#39;School&#39;</span><span class="p">,</span> <span class="s1">&#39;Team&#39;</span> <span class="p">,</span> <span class="s1">&#39;Event&#39;</span><span class="p">,</span> <span class="s1">&#39;Gender&#39;</span><span class="p">,</span> <span class="s1">&#39;Points&#39;</span><span class="p">,</span> <span class="s1">&#39;Rank&#39;</span><span class="p">]]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[701]:</div>
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Contestant</th>
+      <th>School</th>
+      <th>Team</th>
+      <th>Event</th>
+      <th>Gender</th>
+      <th>Points</th>
+      <th>Rank</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>brian D</td>
+      <td>HSU</td>
+      <td>A</td>
+      <td>Caber</td>
+      <td>M</td>
+      <td>7.0</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>brian D</td>
+      <td>HSU</td>
+      <td>A</td>
+      <td>Throw</td>
+      <td>M</td>
+      <td>1.0</td>
+      <td>5</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[726]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">report</span> <span class="o">=</span> <span class="n">final</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;Contestant&#39;</span><span class="p">,</span> <span class="s1">&#39;School&#39;</span><span class="p">,</span> <span class="s1">&#39;Team&#39;</span><span class="p">,</span><span class="s1">&#39;Gender&#39;</span><span class="p">],</span>  <span class="n">as_index</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="s1">&#39;Points&#39;</span><span class="p">,</span> <span class="n">ascending</span> <span class="o">=</span> <span class="bp">False</span><span class="p">)</span>
+<span class="c1"># print &quot;Bull&quot; + report</span>
 </pre></div>
 
 </div>
@@ -12036,71 +14295,9 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 
 
 <div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>           Contestant Gender     Event Team School  Points  Rank
-0               becca      F     Caber    B    HSU    10.0     1
-1        Jillian zuck      F     Caber    B    CPL     7.0     2
-2      Rachel Werhman      F     Caber    A    CPL     5.0     3
-0     Charlie Watkins      M     Caber    B    CPL    10.0     1
-1             brian D      M     Caber    A    HSU     7.0     2
-2              b wall      M     Caber    B    HSU     5.0     3
-0              Dana G      F    Choker    A    HSU    10.0     1
-1                Naya      F    Choker    B    HSU     7.0     2
-2    Giselle Vandrick      F    Choker    B    UCB     5.0     3
-0       Rory MacNeill      M    Choker    A    CPL    10.0     1
-1             Brian D      M    Choker    A    HSU     7.0     2
-2                Sean      M    Choker    A    HSU     5.0     3
-1     Kathie Pauloski      F    Dendro    A    UCB     7.0     2
-2   Kateyln Sunderman      F    Dendro    A    CPL     5.0     3
-0        Jacob Levine      M    Dendro    A    UCB    10.0     1
-0               Kayla      F    Double    B    HSU     5.0     1
-1             Katelyn      F    Double    A    HSU     3.5     2
-2     Vanessa Shevlin      F    Double    A    CPL     2.5     3
-0               Scott      M    Double    A    HSU     5.0     1
-1         Kyle Rozell      M    Double    A    CPL     3.5     2
-2             Brain D      M    Double    A    HSU     2.5     3
-0                Cece    NaN    Double    B    HSU     5.0     1
-0               Chris    NaN    Double    A    HSU     5.0     1
-1              Sierra    NaN    Double    A    HSU     3.5     2
-1         Will Kaemer    NaN    Double    A    CPL     3.5     2
-2       Rachel Wehman    NaN    Double    A    CPL     2.5     3
-2                Sean    NaN    Double    A    HSU     2.5     3
-0     Vanessa Shevlin      F      Hard    A    CPL    10.0     1
-1              sierra      F      Hard    A    HSU     7.0     2
-2           Amanda Ma      F      Hard    A    UCB     5.0     3
-..                ...    ...       ...  ...    ...     ...   ...
-1        Hannah Lopez      F      Pulp    A    UCB     3.5     2
-2        Anna Sackman      F      Pulp    B    CPL     2.5     3
-2                TESS      F      Pulp    A    HSU     2.5     3
-0      Clint Doucette      M      Pulp    B    CPL     5.0     1
-0             BRIAN d      M      Pulp    A    HSU     5.0     1
-1      Lewis Campbell      M      Pulp    A    UCB     3.5     2
-1        Renny Winter      M      Pulp    A    CPL     3.5     2
-2    Chris McSmashter      M      Pulp    A    HSU     2.5     3
-2        Mike Johnson      M      Pulp    B    CPL     2.5     3
-0                Tess      F    Single    A    HSU    10.0     1
-1             Katelyn      F    Single    A    HSU     7.0     2
-2               Becca      F    Single    B    HSU     5.0     3
-0        Will Kraemer      M    Single    A    CPL    10.0     1
-1             Brian D      M    Single    A    HSU     7.0     2
-2                Sean      M    Single    A    HSU     5.0     3
-0              Dana G      F     Speed    A    HSU    10.0     1
-1             Giselle      F     Speed    B    UCB     7.0     2
-2        Hannah Lopez      F     Speed    A    UCB     5.0     3
-0           Brian D.       M     Speed    B    HSU    10.0     1
-1         Kyle Rozell      M     Speed    A    CPL     7.0     2
-2        Will Kraemer      M     Speed    A    CPL     5.0     3
-0       Alegra Garcia      F     Throw    A    UCB    10.0     1
-1              sierra      F     Throw    A    HSU     7.0     2
-2        Hannah Lopez      F     Throw    A    UCB     5.0     3
-0          Ian Wilson      M     Throw    A    CPL    10.0     1
-1     Charlie Watkins      M     Throw    B    CPL     7.0     2
-2      Lewis Campbell      M     Throw    A    UCB     5.0     3
-1           Amanda Ma      F  Traverse    A    UCB     7.0     2
-2              B Wall      F  Traverse    B    HSU     5.0     3
-0                Alex      M  Traverse    B    HSU    10.0     1
-
-[84 rows x 7 columns]
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>c:\users\risato\anaconda2\lib\site-packages\ipykernel\__main__.py:1: FutureWarning: sort(columns=....) is deprecated, use sort_values(by=.....)
+  if __name__ == &#39;__main__&#39;:
 </pre>
 </div>
 </div>
@@ -12111,16 +14308,12 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="prompt input_prompt">In&nbsp;[789]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Print &quot;Bull&quot; and &quot;Bell&quot; of the woods</span>
-<span class="n">report</span> <span class="o">=</span> <span class="n">scores</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;Contestant&#39;</span><span class="p">,</span> <span class="s1">&#39;School&#39;</span><span class="p">,</span> <span class="s1">&#39;Team&#39;</span><span class="p">,</span><span class="s1">&#39;Gender&#39;</span><span class="p">],</span>  <span class="n">as_index</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;Points&#39;</span><span class="p">,</span> <span class="n">ascending</span> <span class="o">=</span> <span class="bp">False</span><span class="p">)</span>
-
-<span class="k">print</span> <span class="s1">&#39;Bull&#39;</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="k">print</span> <span class="s1">&#39;first place&#39;</span>
 <span class="k">print</span> <span class="n">report</span><span class="p">[</span><span class="n">report</span><span class="p">[</span><span class="s1">&#39;Gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;M&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span> <span class="o">=</span> <span class="bp">True</span><span class="p">)</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-<span class="k">print</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span>
-<span class="k">print</span> <span class="s1">&#39;Bell&#39;</span>
+
 <span class="k">print</span> <span class="n">report</span><span class="p">[</span><span class="n">report</span><span class="p">[</span><span class="s1">&#39;Gender&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;F&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span> <span class="o">=</span> <span class="bp">True</span><span class="p">)</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 </pre></div>
 
@@ -12134,23 +14327,20 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Bull
-Contestant    Alex
-School         HSU
-Team             B
-Gender           M
-Points          23
-Rank            10
+<pre>first place
+Contestant    Scott
+School          HSU
+Team              A
+Gender            M
+Points           27
+Rank              4
 Name: 0, dtype: object
-
-
-Bell
-Contestant    Dana G
+Contestant    sierra
 School           HSU
 Team               A
 Gender             F
-Points            20
-Rank               2
+Points            24
+Rank               5
 Name: 0, dtype: object
 </pre>
 </div>
@@ -12162,11 +14352,10 @@ Name: 0, dtype: object
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="prompt input_prompt">In&nbsp;[793]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Print Team Rankings</span>
-<span class="n">report</span> <span class="o">=</span> <span class="n">scores</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;School&#39;</span><span class="p">,</span> <span class="s1">&#39;Team&#39;</span><span class="p">],</span>  <span class="n">as_index</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;Points&#39;</span><span class="p">,</span> <span class="n">ascending</span> <span class="o">=</span> <span class="bp">False</span><span class="p">)</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">report</span> <span class="o">=</span> <span class="n">final</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;School&#39;</span><span class="p">,</span> <span class="s1">&#39;Team&#39;</span><span class="p">],</span>  <span class="n">as_index</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="s1">&#39;Points&#39;</span><span class="p">,</span> <span class="n">ascending</span> <span class="o">=</span> <span class="bp">False</span><span class="p">)</span>
 <span class="k">print</span> <span class="n">report</span>  
 </pre></div>
 
@@ -12181,16 +14370,38 @@ Name: 0, dtype: object
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>  School Team  Points  Rank
-2    HSU    A   166.0    76
-0    CPL    A   125.0    70
-3    HSU    B    92.0    75
-4    UCB    A    85.0    71
-1    CPL    B    82.0    85
-5    UCB    B    17.0    24
+2    HSU    A   166.0    63
+0    CPL    A   125.0    56
+3    HSU    B    92.0    61
+4    UCB    A    85.0    52
+1    CPL    B    82.0    65
+5    UCB    B    17.0    19
 </pre>
 </div>
 </div>
 
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>c:\users\risato\anaconda2\lib\site-packages\ipykernel\__main__.py:1: FutureWarning: sort(columns=....) is deprecated, use sort_values(by=.....)
+  if __name__ == &#39;__main__&#39;:
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[819]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">names</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">df</span><span class="p">)</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Contestant&#39;</span><span class="p">])[[</span><span class="s1">&#39;Contestant&#39;</span><span class="p">,</span> <span class="s1">&#39;School&#39;</span><span class="p">,</span> <span class="s1">&#39;Team&#39;</span><span class="p">]]</span>
+<span class="n">names</span> <span class="o">=</span> <span class="n">names</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span> <span class="o">=</span> <span class="bp">True</span><span class="p">)</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">()</span>
+</pre></div>
+
+</div>
 </div>
 </div>
 

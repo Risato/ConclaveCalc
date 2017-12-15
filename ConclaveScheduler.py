@@ -3,7 +3,7 @@
 
 # # Required Scripts
 
-# In[5]:
+# In[1]:
 
 import os
 import pandas as pd
@@ -13,15 +13,7 @@ from pandas import ExcelWriter
 from pandas import ExcelFile
 
 
-# In[6]:
-
-# Add Switch for team or semiprofessional event
-teamswitch = None
-while teamswitch not in ['yes', 'no']:
-    teamswitch = raw_input("Do you need to separate competitors by team? ").lower()
-
-
-# In[27]:
+# In[2]:
 
 dirs = os.listdir('.') 
 
@@ -29,17 +21,103 @@ dirs = os.listdir('.')
 for file in dirs:
     print file
 
-response = None
-while response not in dirs:
-    response = raw_input("Please enter filename: ")
+registration = None
+while registration not in dirs:
+    registration = raw_input("Please enter Registration File: ")
 
-# response = 'Bearclave.xlsx'
-rawinput = pd.read_excel(response, sheetname=None)
+reginput = pd.read_excel(registration, sheetname='Registration')
 
 
-# # Calculate Results
+# In[3]:
 
-# In[13]:
+# Check to see if partners are listed in competitor list
+reginput = reginput.dropna(subset=['Competitor'])
+
+#Scan for Errors
+names = reginput['Competitor']
+
+#if error, return error margins for judge to fix
+errorname = 0
+for individuals in reginput['Double'].dropna():
+    if individuals not in names.tolist():
+        print 'Double Buck partner error: ' + individuals
+        errorname = errorname + 1
+        
+for individuals in reginput['Pulp'].dropna():
+    if individuals not in names.tolist():
+        print 'Pulp Toss partner error: ' + individuals
+        errorname = errorname + 1
+        
+for individuals in reginput['JackJill'].dropna():
+    if individuals not in names.tolist():
+        print 'Jack and Jill partner error: ' + individuals
+        errorname = errorname + 1
+    
+if errorname > 0:
+    print 'You have ' + str(errorname) + ' issues to resolve'
+#     exit()
+
+
+# # Generate Schedule
+
+# In[5]:
+
+teamswitch = None
+options = ['COLLEGIATE', 'PROFESSIONAL']
+while teamswitch not in options:
+    teamswitch = raw_input("Is this for a COLLEGIATE or PROFESSIONAL competition? Enter answer in all caps. ")
+
+
+# In[40]:
+
+
+event_Hard = reginput[reginput['Hard'].notnull()]
+
+event_Speed = reginput[reginput['Speed'].notnull()]
+
+event_VHard = reginput[reginput['V Hard'].notnull()]
+
+event_VSpeed = reginput[reginput['V Speed'].notnull()]
+
+event_Single = reginput[reginput['Single'].notnull()]
+
+event_OP = reginput[reginput['OP'].notnull()]
+
+event_Psaw = reginput[reginput['Psaw'].notnull()]
+
+event_Pulp = reginput[reginput['Pulp'].notnull()]
+
+event_Double = reginput[reginput['Double'].notnull()]
+
+event_JackJill = reginput[reginput['JackJill'].notnull()]
+
+event_Climb = reginput[reginput['Climb'].notnull()]
+
+event_Choker = reginput[reginput['Choker'].notnull()]
+
+event_SpeedAxe = reginput[reginput['SpeedAxe'].notnull()]
+
+event_Axe = reginput[reginput['Axe'].notnull()][['School', 'Team', 'Competitor', 'Gender']]
+event_Axe['Throw 1'], event_Axe['Throw 2'], event_Axe['Throw 3'], event_Axe['Score'] = [np.nan, np.nan, np.nan, sum]
+
+event_Caber = reginput[reginput['Caber'].notnull()]
+
+event_Dendro = reginput[reginput['Dendro'].notnull()]
+
+event_Traverse = reginput[reginput['Traverse'].notnull()]
+
+
+# In[41]:
+
+event_Axe
+
+
+# In[12]:
+
+list(reginput)
+
+
+# In[ ]:
 
 # Assigns rank based on ascending or descending scores
 pt_order ={
@@ -68,7 +146,7 @@ gender_split = ['Dendro', 'Traverse', 'Cruise']
 partner_split = ['Double', 'JackJill', 'Caber']
 
 
-# In[18]:
+# In[ ]:
 
 scores = pd.DataFrame()
 
@@ -113,7 +191,7 @@ for key, value in df.iteritems() :
 #         print key + '-F'
 
 
-# In[19]:
+# In[ ]:
 
 # Clean output
 # Weigh scores in partner events
@@ -136,13 +214,13 @@ scores = contestants.append(partners)
 
 # # Print Results
 
-# In[20]:
+# In[ ]:
 
 # Print Top 3 in each event
 print scores[scores['Rank']<=3].sort_values(['Event', 'Gender', 'Rank'])
 
 
-# In[21]:
+# In[ ]:
 
 # Print "Bull" and "Bell" of the woods
 report = scores.groupby(['Contestant', 'School', 'Team','Gender'],  as_index=False).sum().sort_values('Points', ascending = False)
@@ -154,7 +232,7 @@ print 'Bell'
 print report[report['Gender'] == 'F'].reset_index(drop = True).loc[0]
 
 
-# In[23]:
+# In[ ]:
 
 # Print Team Rankings
 report = scores.groupby(['School', 'Team'],  as_index=False).sum().sort_values('Points', ascending = False)

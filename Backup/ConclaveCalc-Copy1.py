@@ -21,7 +21,7 @@ while teamswitch not in ['yes', 'no']:
     teamswitch = raw_input("Do you need to separate competitors by team? ").lower()
 
 
-# In[27]:
+# In[16]:
 
 dirs = os.listdir('.') 
 
@@ -33,7 +33,7 @@ response = None
 while response not in dirs:
     response = raw_input("Please enter filename: ")
 
-# response = 'Bearclave.xlsx'
+response = 'Bearclave.xlsx'
 rawinput = pd.read_excel(response, sheetname=None)
 
 
