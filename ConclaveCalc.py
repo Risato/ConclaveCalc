@@ -3,7 +3,7 @@
 
 # # Required Scripts
 
-# In[5]:
+# In[1]:
 
 import os
 import pandas as pd
@@ -13,7 +13,7 @@ from pandas import ExcelWriter
 from pandas import ExcelFile
 
 
-# In[6]:
+# In[2]:
 
 # Add Switch for team or semiprofessional event
 teamswitch = None
@@ -21,7 +21,7 @@ while teamswitch not in ['yes', 'no']:
     teamswitch = raw_input("Do you need to separate competitors by team? ").lower()
 
 
-# In[27]:
+# In[3]:
 
 dirs = os.listdir('.') 
 
@@ -39,7 +39,7 @@ rawinput = pd.read_excel(response, sheetname=None)
 
 # # Calculate Results
 
-# In[13]:
+# In[4]:
 
 # Assigns rank based on ascending or descending scores
 pt_order ={
@@ -68,7 +68,7 @@ gender_split = ['Dendro', 'Traverse', 'Cruise']
 partner_split = ['Double', 'JackJill', 'Caber']
 
 
-# In[18]:
+# In[5]:
 
 scores = pd.DataFrame()
 
@@ -113,7 +113,7 @@ for key, value in df.iteritems() :
 #         print key + '-F'
 
 
-# In[19]:
+# In[6]:
 
 # Clean output
 # Weigh scores in partner events

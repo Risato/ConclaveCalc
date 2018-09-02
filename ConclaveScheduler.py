@@ -3,7 +3,7 @@
 
 # # Required Scripts
 
-# In[1]:
+# In[ ]:
 
 import os
 import pandas as pd
@@ -13,7 +13,7 @@ from pandas import ExcelWriter
 from pandas import ExcelFile
 
 
-# In[2]:
+# In[ ]:
 
 dirs = os.listdir('.') 
 
@@ -60,7 +60,7 @@ if errorname > 0:
 
 # # Generate Schedule
 
-# In[5]:
+# In[4]:
 
 teamswitch = None
 options = ['COLLEGIATE', 'PROFESSIONAL']
@@ -68,7 +68,7 @@ while teamswitch not in options:
     teamswitch = raw_input("Is this for a COLLEGIATE or PROFESSIONAL competition? Enter answer in all caps. ")
 
 
-# In[40]:
+# In[5]:
 
 
 event_Hard = reginput[reginput['Hard'].notnull()]
@@ -107,17 +107,17 @@ event_Dendro = reginput[reginput['Dendro'].notnull()]
 event_Traverse = reginput[reginput['Traverse'].notnull()]
 
 
-# In[41]:
+# In[6]:
 
 event_Axe
 
 
-# In[12]:
+# In[7]:
 
 list(reginput)
 
 
-# In[ ]:
+# In[8]:
 
 # Assigns rank based on ascending or descending scores
 pt_order ={
@@ -146,7 +146,7 @@ gender_split = ['Dendro', 'Traverse', 'Cruise']
 partner_split = ['Double', 'JackJill', 'Caber']
 
 
-# In[ ]:
+# In[9]:
 
 scores = pd.DataFrame()
 

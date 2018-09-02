@@ -11761,7 +11761,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
@@ -11779,7 +11779,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Add Switch for team or semiprofessional event</span>
@@ -11798,7 +11798,8 @@ div#notebook {
 
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Do you need to separate competitors by team? no
+<pre>Do you need to separate competitors by team? 
+Do you need to separate competitors by team? yes
 </pre>
 </div>
 </div>
@@ -11809,7 +11810,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">dirs</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">)</span> 
@@ -11836,10 +11837,13 @@ div#notebook {
 
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>.git
+<pre>.env
+.git
 .gitattributes
 .gitignore
 .ipynb_checkpoints
+app.json
+Backup
 Bearclave.xlsx
 BearClaveScheduleONLY.xlsx
 ConclaveCalc-Copy1.html
@@ -11850,12 +11854,20 @@ ConclaveCalc.py
 ConclaveScheduler.html
 ConclaveScheduler.ipynb
 ConclaveScheduler.py
+gettingstarted
+hello
 HSU Registration Bearclave 2017.xlsx
+manage.py
+Pipfile
+Pipfile.lock
+Procfile
+Procfile.windows
+README.md
 Registration.xlsx
 Untitled.html
 Untitled.py
 Untitled.txt
-Please enter filename: Registration.xlsx
+Please enter filename: HSU Registration Bearclave 2017.xlsx
 </pre>
 </div>
 </div>
@@ -11875,7 +11887,7 @@ Please enter filename: Registration.xlsx
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Assigns rank based on ascending or descending scores</span>
@@ -11912,7 +11924,7 @@ Please enter filename: Registration.xlsx
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">scores</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span>
@@ -11962,10 +11974,33 @@ Please enter filename: Registration.xlsx
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-5-527658fb768a&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">      1</span> scores <span class="ansi-yellow-intense-fg ansi-bold">=</span> pd<span class="ansi-yellow-intense-fg ansi-bold">.</span>DataFrame<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      2</span> 
+<span class="ansi-green-fg">----&gt; 3</span><span class="ansi-red-fg"> </span><span class="ansi-green-intense-fg ansi-bold">for</span> key<span class="ansi-yellow-intense-fg ansi-bold">,</span> value <span class="ansi-green-intense-fg ansi-bold">in</span> df<span class="ansi-yellow-intense-fg ansi-bold">.</span>iteritems<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-yellow-intense-fg ansi-bold">)</span> <span class="ansi-yellow-intense-fg ansi-bold">:</span>
+<span class="ansi-green-intense-fg ansi-bold">      4</span> 
+<span class="ansi-green-intense-fg ansi-bold">      5</span>     <span class="ansi-green-intense-fg ansi-bold">if</span> key <span class="ansi-green-intense-fg ansi-bold">in</span> gender_split<span class="ansi-yellow-intense-fg ansi-bold">:</span>
+
+<span class="ansi-red-fg">NameError</span>: name &#39;df&#39; is not defined</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Clean output</span>
@@ -11996,12 +12031,61 @@ Please enter filename: Registration.xlsx
 
 
 <div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>c:\users\risato\anaconda2\lib\site-packages\ipykernel\__main__.py:9: SettingWithCopyWarning: 
-A value is trying to be set on a copy of a slice from a DataFrame
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">KeyError</span>                                  Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-6-3eb539615540&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">      1</span> <span class="ansi-red-intense-fg ansi-bold"># Clean output</span>
+<span class="ansi-green-intense-fg ansi-bold">      2</span> <span class="ansi-red-intense-fg ansi-bold"># Weigh scores in partner events</span>
+<span class="ansi-green-fg">----&gt; 3</span><span class="ansi-red-fg"> </span>scores<span class="ansi-yellow-intense-fg ansi-bold">[</span><span class="ansi-blue-intense-fg ansi-bold">&#39;multiplier&#39;</span><span class="ansi-yellow-intense-fg ansi-bold">]</span> <span class="ansi-yellow-intense-fg ansi-bold">=</span> np<span class="ansi-yellow-intense-fg ansi-bold">.</span>where<span class="ansi-yellow-intense-fg ansi-bold">(</span>scores<span class="ansi-yellow-intense-fg ansi-bold">[</span><span class="ansi-blue-intense-fg ansi-bold">&#39;Contestant B&#39;</span><span class="ansi-yellow-intense-fg ansi-bold">]</span><span class="ansi-yellow-intense-fg ansi-bold">.</span>notnull<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">,</span> <span class="ansi-cyan-intense-fg ansi-bold">0.5</span><span class="ansi-yellow-intense-fg ansi-bold">,</span> <span class="ansi-cyan-intense-fg ansi-bold">1</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      4</span> scores<span class="ansi-yellow-intense-fg ansi-bold">[</span><span class="ansi-blue-intense-fg ansi-bold">&#39;Points&#39;</span><span class="ansi-yellow-intense-fg ansi-bold">]</span> <span class="ansi-yellow-intense-fg ansi-bold">=</span> scores<span class="ansi-yellow-intense-fg ansi-bold">[</span><span class="ansi-blue-intense-fg ansi-bold">&#39;multiplier&#39;</span><span class="ansi-yellow-intense-fg ansi-bold">]</span><span class="ansi-yellow-intense-fg ansi-bold">*</span>scores<span class="ansi-yellow-intense-fg ansi-bold">[</span><span class="ansi-blue-intense-fg ansi-bold">&#39;Points&#39;</span><span class="ansi-yellow-intense-fg ansi-bold">]</span>
+<span class="ansi-green-intense-fg ansi-bold">      5</span> scores <span class="ansi-yellow-intense-fg ansi-bold">=</span> scores<span class="ansi-yellow-intense-fg ansi-bold">[</span><span class="ansi-yellow-intense-fg ansi-bold">[</span><span class="ansi-blue-intense-fg ansi-bold">&#39;Contestant&#39;</span><span class="ansi-yellow-intense-fg ansi-bold">,</span> <span class="ansi-blue-intense-fg ansi-bold">&#39;Gender&#39;</span><span class="ansi-yellow-intense-fg ansi-bold">,</span> <span class="ansi-blue-intense-fg ansi-bold">&#39;Contestant B&#39;</span><span class="ansi-yellow-intense-fg ansi-bold">,</span> <span class="ansi-blue-intense-fg ansi-bold">&#39;Gender B&#39;</span><span class="ansi-yellow-intense-fg ansi-bold">,</span> <span class="ansi-blue-intense-fg ansi-bold">&#39;Event&#39;</span><span class="ansi-yellow-intense-fg ansi-bold">,</span> <span class="ansi-blue-intense-fg ansi-bold">&#39;Team&#39;</span><span class="ansi-yellow-intense-fg ansi-bold">,</span> <span class="ansi-blue-intense-fg ansi-bold">&#39;School&#39;</span><span class="ansi-yellow-intense-fg ansi-bold">,</span> <span class="ansi-blue-intense-fg ansi-bold">&#39;Points&#39;</span><span class="ansi-yellow-intense-fg ansi-bold">,</span> <span class="ansi-blue-intense-fg ansi-bold">&#39;Rank&#39;</span><span class="ansi-yellow-intense-fg ansi-bold">]</span><span class="ansi-yellow-intense-fg ansi-bold">]</span>
 
-See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy
-</pre>
+<span class="ansi-green-fg">C:\Users\Risato\Anaconda2\lib\site-packages\pandas\core\frame.pyc</span> in <span class="ansi-cyan-fg">__getitem__</span><span class="ansi-blue-fg">(self, key)</span>
+<span class="ansi-green-intense-fg ansi-bold">   2057</span>             <span class="ansi-green-intense-fg ansi-bold">return</span> self<span class="ansi-yellow-intense-fg ansi-bold">.</span>_getitem_multilevel<span class="ansi-yellow-intense-fg ansi-bold">(</span>key<span class="ansi-yellow-intense-fg ansi-bold">)</span>
+<span class="ansi-green-intense-fg ansi-bold">   2058</span>         <span class="ansi-green-intense-fg ansi-bold">else</span><span class="ansi-yellow-intense-fg ansi-bold">:</span>
+<span class="ansi-green-fg">-&gt; 2059</span><span class="ansi-red-fg">             </span><span class="ansi-green-intense-fg ansi-bold">return</span> self<span class="ansi-yellow-intense-fg ansi-bold">.</span>_getitem_column<span class="ansi-yellow-intense-fg ansi-bold">(</span>key<span class="ansi-yellow-intense-fg ansi-bold">)</span>
+<span class="ansi-green-intense-fg ansi-bold">   2060</span> 
+<span class="ansi-green-intense-fg ansi-bold">   2061</span>     <span class="ansi-green-intense-fg ansi-bold">def</span> _getitem_column<span class="ansi-yellow-intense-fg ansi-bold">(</span>self<span class="ansi-yellow-intense-fg ansi-bold">,</span> key<span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">:</span>
+
+<span class="ansi-green-fg">C:\Users\Risato\Anaconda2\lib\site-packages\pandas\core\frame.pyc</span> in <span class="ansi-cyan-fg">_getitem_column</span><span class="ansi-blue-fg">(self, key)</span>
+<span class="ansi-green-intense-fg ansi-bold">   2064</span>         <span class="ansi-red-intense-fg ansi-bold"># get column</span>
+<span class="ansi-green-intense-fg ansi-bold">   2065</span>         <span class="ansi-green-intense-fg ansi-bold">if</span> self<span class="ansi-yellow-intense-fg ansi-bold">.</span>columns<span class="ansi-yellow-intense-fg ansi-bold">.</span>is_unique<span class="ansi-yellow-intense-fg ansi-bold">:</span>
+<span class="ansi-green-fg">-&gt; 2066</span><span class="ansi-red-fg">             </span><span class="ansi-green-intense-fg ansi-bold">return</span> self<span class="ansi-yellow-intense-fg ansi-bold">.</span>_get_item_cache<span class="ansi-yellow-intense-fg ansi-bold">(</span>key<span class="ansi-yellow-intense-fg ansi-bold">)</span>
+<span class="ansi-green-intense-fg ansi-bold">   2067</span> 
+<span class="ansi-green-intense-fg ansi-bold">   2068</span>         <span class="ansi-red-intense-fg ansi-bold"># duplicate columns &amp; possible reduce dimensionality</span>
+
+<span class="ansi-green-fg">C:\Users\Risato\Anaconda2\lib\site-packages\pandas\core\generic.pyc</span> in <span class="ansi-cyan-fg">_get_item_cache</span><span class="ansi-blue-fg">(self, item)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1384</span>         res <span class="ansi-yellow-intense-fg ansi-bold">=</span> cache<span class="ansi-yellow-intense-fg ansi-bold">.</span>get<span class="ansi-yellow-intense-fg ansi-bold">(</span>item<span class="ansi-yellow-intense-fg ansi-bold">)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1385</span>         <span class="ansi-green-intense-fg ansi-bold">if</span> res <span class="ansi-green-intense-fg ansi-bold">is</span> None<span class="ansi-yellow-intense-fg ansi-bold">:</span>
+<span class="ansi-green-fg">-&gt; 1386</span><span class="ansi-red-fg">             </span>values <span class="ansi-yellow-intense-fg ansi-bold">=</span> self<span class="ansi-yellow-intense-fg ansi-bold">.</span>_data<span class="ansi-yellow-intense-fg ansi-bold">.</span>get<span class="ansi-yellow-intense-fg ansi-bold">(</span>item<span class="ansi-yellow-intense-fg ansi-bold">)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1387</span>             res <span class="ansi-yellow-intense-fg ansi-bold">=</span> self<span class="ansi-yellow-intense-fg ansi-bold">.</span>_box_item_values<span class="ansi-yellow-intense-fg ansi-bold">(</span>item<span class="ansi-yellow-intense-fg ansi-bold">,</span> values<span class="ansi-yellow-intense-fg ansi-bold">)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1388</span>             cache<span class="ansi-yellow-intense-fg ansi-bold">[</span>item<span class="ansi-yellow-intense-fg ansi-bold">]</span> <span class="ansi-yellow-intense-fg ansi-bold">=</span> res
+
+<span class="ansi-green-fg">C:\Users\Risato\Anaconda2\lib\site-packages\pandas\core\internals.pyc</span> in <span class="ansi-cyan-fg">get</span><span class="ansi-blue-fg">(self, item, fastpath)</span>
+<span class="ansi-green-intense-fg ansi-bold">   3541</span> 
+<span class="ansi-green-intense-fg ansi-bold">   3542</span>             <span class="ansi-green-intense-fg ansi-bold">if</span> <span class="ansi-green-intense-fg ansi-bold">not</span> isnull<span class="ansi-yellow-intense-fg ansi-bold">(</span>item<span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">:</span>
+<span class="ansi-green-fg">-&gt; 3543</span><span class="ansi-red-fg">                 </span>loc <span class="ansi-yellow-intense-fg ansi-bold">=</span> self<span class="ansi-yellow-intense-fg ansi-bold">.</span>items<span class="ansi-yellow-intense-fg ansi-bold">.</span>get_loc<span class="ansi-yellow-intense-fg ansi-bold">(</span>item<span class="ansi-yellow-intense-fg ansi-bold">)</span>
+<span class="ansi-green-intense-fg ansi-bold">   3544</span>             <span class="ansi-green-intense-fg ansi-bold">else</span><span class="ansi-yellow-intense-fg ansi-bold">:</span>
+<span class="ansi-green-intense-fg ansi-bold">   3545</span>                 indexer <span class="ansi-yellow-intense-fg ansi-bold">=</span> np<span class="ansi-yellow-intense-fg ansi-bold">.</span>arange<span class="ansi-yellow-intense-fg ansi-bold">(</span>len<span class="ansi-yellow-intense-fg ansi-bold">(</span>self<span class="ansi-yellow-intense-fg ansi-bold">.</span>items<span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">[</span>isnull<span class="ansi-yellow-intense-fg ansi-bold">(</span>self<span class="ansi-yellow-intense-fg ansi-bold">.</span>items<span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">]</span>
+
+<span class="ansi-green-fg">C:\Users\Risato\Anaconda2\lib\site-packages\pandas\indexes\base.pyc</span> in <span class="ansi-cyan-fg">get_loc</span><span class="ansi-blue-fg">(self, key, method, tolerance)</span>
+<span class="ansi-green-intense-fg ansi-bold">   2134</span>                 <span class="ansi-green-intense-fg ansi-bold">return</span> self<span class="ansi-yellow-intense-fg ansi-bold">.</span>_engine<span class="ansi-yellow-intense-fg ansi-bold">.</span>get_loc<span class="ansi-yellow-intense-fg ansi-bold">(</span>key<span class="ansi-yellow-intense-fg ansi-bold">)</span>
+<span class="ansi-green-intense-fg ansi-bold">   2135</span>             <span class="ansi-green-intense-fg ansi-bold">except</span> KeyError<span class="ansi-yellow-intense-fg ansi-bold">:</span>
+<span class="ansi-green-fg">-&gt; 2136</span><span class="ansi-red-fg">                 </span><span class="ansi-green-intense-fg ansi-bold">return</span> self<span class="ansi-yellow-intense-fg ansi-bold">.</span>_engine<span class="ansi-yellow-intense-fg ansi-bold">.</span>get_loc<span class="ansi-yellow-intense-fg ansi-bold">(</span>self<span class="ansi-yellow-intense-fg ansi-bold">.</span>_maybe_cast_indexer<span class="ansi-yellow-intense-fg ansi-bold">(</span>key<span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
+<span class="ansi-green-intense-fg ansi-bold">   2137</span> 
+<span class="ansi-green-intense-fg ansi-bold">   2138</span>         indexer <span class="ansi-yellow-intense-fg ansi-bold">=</span> self<span class="ansi-yellow-intense-fg ansi-bold">.</span>get_indexer<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-yellow-intense-fg ansi-bold">[</span>key<span class="ansi-yellow-intense-fg ansi-bold">]</span><span class="ansi-yellow-intense-fg ansi-bold">,</span> method<span class="ansi-yellow-intense-fg ansi-bold">=</span>method<span class="ansi-yellow-intense-fg ansi-bold">,</span> tolerance<span class="ansi-yellow-intense-fg ansi-bold">=</span>tolerance<span class="ansi-yellow-intense-fg ansi-bold">)</span>
+
+<span class="ansi-green-fg">pandas\index.pyx</span> in <span class="ansi-cyan-fg">pandas.index.IndexEngine.get_loc (pandas\index.c:4433)</span><span class="ansi-blue-fg">()</span>
+
+<span class="ansi-green-fg">pandas\index.pyx</span> in <span class="ansi-cyan-fg">pandas.index.IndexEngine.get_loc (pandas\index.c:4279)</span><span class="ansi-blue-fg">()</span>
+
+<span class="ansi-green-fg">pandas\src\hashtable_class_helper.pxi</span> in <span class="ansi-cyan-fg">pandas.hashtable.PyObjectHashTable.get_item (pandas\hashtable.c:13742)</span><span class="ansi-blue-fg">()</span>
+
+<span class="ansi-green-fg">pandas\src\hashtable_class_helper.pxi</span> in <span class="ansi-cyan-fg">pandas.hashtable.PyObjectHashTable.get_item (pandas\hashtable.c:13696)</span><span class="ansi-blue-fg">()</span>
+
+<span class="ansi-red-fg">KeyError</span>: &#39;Contestant B&#39;</pre>
 </div>
 </div>
 
